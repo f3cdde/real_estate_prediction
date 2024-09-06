@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=src/app.py
+      - FLASK_ENV=development
+      - DATA_URL=https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv
